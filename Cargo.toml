@@ -1,0 +1,19 @@
+[package]
+name = "perseus-tailwind"
+version = "0.4.1"
+edition = "2021"
+
+license = "MIT OR Apache-2.0"
+description = "A plugin for Perseus that automatically builds Tailwind CSS"
+repository = "https://github.com/wingertge/perseus-tailwind"
+readme = "README.md"
+keywords = ["webdev", "wasm", "perseus"]
+categories = ["web-programming", "development-tools", "wasm"]
+exclude = [".github/*", ".idea/*"]
+
+[dependencies]
+log = "0.4"
+perseus = "^0.4.0-beta.14"
+
+[target.'cfg(engine)'.dependencies]
+reqwest = { version = "0.11", features = ["blocking"] }
